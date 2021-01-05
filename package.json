@@ -1,0 +1,13 @@
+{
+  "name": "class-linebot",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node api/index.js"
+  },
+  "author": "Alesion30",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
