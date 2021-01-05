@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const router = require('./src/routes');
+const router = require('../src/routes');
 app.use(router);
 
 const PORT = process.env.PORT || 3000;
