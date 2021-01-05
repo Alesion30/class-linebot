@@ -9,22 +9,22 @@ const getClass = (week) => {
   let classDayData = null;
   switch (week) {
     case 'monday':
-      classDayData = classJsonData.monday ?? null;
+      classDayData = classJsonData.monday || null;
       break;
     case 'thuseday':
-      classDayData = classJsonData.thuseday ?? null;
+      classDayData = classJsonData.thuseday || null;
       break;
     case 'wednesday':
-      classDayData = classJsonData.wednesday ?? null;
+      classDayData = classJsonData.wednesday || null;
       break;
     case 'thursday':
-      classDayData = classJsonData.thursday ?? null;
+      classDayData = classJsonData.thursday || null;
       break;
     case 'friday':
-      classDayData = classJsonData.friday ?? null;
+      classDayData = classJsonData.friday || null;
       break;
   }
-  return classDayData ?? null;
+  return classDayData || null;
 };
 
 module.exports = getClass;
