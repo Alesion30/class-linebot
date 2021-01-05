@@ -15,12 +15,9 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const router = express.Router();
-router.get('/api', (req, res) => {
-  res.send('授業マイスターAPI');
-});
+const router = require('../src/routes');
 app.use(router);
 
 const PORT = process.env.PORT || 3000;
 process.env.VERCEL_REGION ? (module.exports = app) : app.listen(PORT);
-console.log(`Server running at http://localhost:${PORT}`);
+console.log(`Server running at http://localhost:${PORT}/api`);
