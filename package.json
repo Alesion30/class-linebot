@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "nodemon api/index.js",
-    "start": "node api/index.js",
-    "format": "prettier --write ./api/*.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "format": "prettier --write ./src/*.js"
   },
   "author": "Alesion30",
   "license": "ISC",
