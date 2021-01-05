@@ -29,11 +29,15 @@ const handleEvent = (event) => {
       classData = getClass('friday');
       message += '[金曜の時間割]\n';
     }
-    for (let i = 1; i <= 6; i++) {
-      if (classData && classData[i])
-        message += `${i}時間目: ${classData[i]['name']}\n`;
+    if (classData) {
+      for (let i = 1; i <= 6; i++) {
+        if (classData[i])
+          message += `${i}時間目: ${classData[i]['name']}\n`;
+      }
+      message = message.slice(0, -1);
+    } else {
+      message = '全休です';
     }
-    message = message.slice(0, -1);
   }
 
   if (!message)
