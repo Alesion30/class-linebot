@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const router = express.Router();
-router.get('/', (req, res) => {
+router.get('/api', (req, res) => {
   res.send('授業マイスターAPI');
 });
 app.use(router);
