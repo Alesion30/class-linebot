@@ -13,19 +13,25 @@ const handleEvent = (event) => {
   const containOfText = (text) => requestMessage.indexOf(text) >= 0;
   if (containOfText('時間割')) {
     let classData = null;
+    let flag = false;
     if (containOfText('月曜')) {
+      flag = true;
       classData = getClass('monday');
       message += '[月曜の時間割]\n';
     } else if (containOfText('火曜')) {
+      flag = true;
       classData = getClass('thuseday');
       message += '[火曜の時間割]\n';
     } else if (containOfText('水曜')) {
+      flag = true;
       classData = getClass('wednesday');
       message += '[水曜の時間割]\n';
     } else if (containOfText('木曜')) {
+      flag = true;
       classData = getClass('thursday');
       message += '[木曜の時間割]\n';
     } else if (containOfText('金曜')) {
+      flag = true;
       classData = getClass('friday');
       message += '[金曜の時間割]\n';
     }
@@ -35,7 +41,7 @@ const handleEvent = (event) => {
           message += `${i}時間目: ${classData[i]['name']}\n`;
       }
       message = message.slice(0, -1);
-    } else {
+    } else if (flag) {
       message = '全休です';
     }
   }
