@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nodemon api/index.js",
     "start": "node api/index.js",
-    "format": "prettier --write ./src/*.js"
+    "format": "prettier --write ./**/*.js"
   },
   "author": "Alesion30",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "eslint": "^7.17.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-import": "^2.22.1",
