@@ -6,7 +6,12 @@ const handleEvent = (event) => {
     return Promise.resolve(null);
   }
 
-  let message = 'テストメッセージ';
+  // 受信メッセージ
+  const requestMessage = event.message.text;
+
+  // 送信メッセージ
+  let message = `受信メッセージ: ${requestMessage}`;
+
   return replyTextMessage(event.replyToken, message);
 };
 module.exports = handleEvent;
